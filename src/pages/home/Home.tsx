@@ -73,14 +73,15 @@ const Main: FC<MainProps> = ({ isLoading }) => {
 
 const Project: FC = () => {
   return (
-    <div className="mt-[260px] lg:mt-[240px] w-full">
+    <div className="mt-[260px] w-full lg:mt-[240px]">
       <p className="font-bebas text-8xl text-white/40">Project</p>
 
       <div className="flex flex-col items-center gap-4">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div key={index} className="w-full h-[300px] border bg-black/50">
-
-          </div>
+          <div
+            key={index}
+            className="h-[300px] w-full border bg-black/50"
+          ></div>
         ))}
       </div>
     </div>
