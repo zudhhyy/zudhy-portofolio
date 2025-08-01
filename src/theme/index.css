@@ -4,9 +4,27 @@
 
 @layer base {
   @font-face {
-    font-family: 'BebasNeue-Regular';
-    src: local('BebasNeue-Regular'), url('/src/assets/fonts/BebasNeue-Regular.ttf') format('truetype');
-    font-weight: regular;
+    font-family: "BebasNeue-Regular";
+    src: url("/src/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Bold.ttf") format("truetype");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Regular.ttf") format("truetype");
+    font-weight: 400;
   }
 
   :root {
@@ -19,6 +37,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: default;
+    /* scroll-behavior: smooth; */
+    font-family: HarmonyOS Sans, sans-serif;
   }
 
   .stroke-text {

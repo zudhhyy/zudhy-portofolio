@@ -13,7 +13,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <SpinningEarth />
       <Navbar />
       {children}

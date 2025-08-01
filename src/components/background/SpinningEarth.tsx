@@ -1,17 +1,21 @@
 import { useEffect, useState, FC } from "react";
 import Lottie from "lottie-react";
 
-import SpinningEarthImg from "assets/images/background/spinning-earth.webp";
+// import SpinningEarthImg from "assets/images/background/spinning-earth.webp";
 import StarLottie from "assets/lotties/star.json";
 
 const SpinningEarth: FC = () => {
-  const [rotation, setRotation] = useState(0);
+  // const [rotation, setRotation] = useState(0);
   const [showMeteorMid, setShowMeteorMid] = useState(false);
-  const [showMeterRight, setShowMeterRight] = useState(false);
+  const [showMeteorRight, setShowMeteorRight] = useState(false);
 
   useEffect(() => {
+    // console.log("jalan");
+
     const handleScroll = () => {
-      setRotation(window.scrollY * 0.1);
+      // console.log(window);
+
+      // setRotation(window.scrollY * 0.1);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,7 +27,7 @@ const SpinningEarth: FC = () => {
   useEffect(() => {
     const interval = setTimeout(() => {
       setTimeout(() => {
-        setShowMeterRight(true);
+        setShowMeteorRight(true);
       }, 3000);
       setShowMeteorMid(true);
     }, 2000);
@@ -34,7 +38,7 @@ const SpinningEarth: FC = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="fixed -z-10 h-screen w-full bg-gradient-to-b from-primary-background-start to-primary-background-end" />
       <div className="flex items-center justify-between">
         <Lottie
@@ -49,7 +53,7 @@ const SpinningEarth: FC = () => {
             className="fixed left-0 right-0 top-10 -z-10 mx-auto w-1/3"
           />
         )}
-        {showMeterRight && (
+        {showMeteorRight && (
           <Lottie
             animationData={StarLottie}
             loop={true}
@@ -58,7 +62,7 @@ const SpinningEarth: FC = () => {
         )}
       </div>
 
-      <div className="fixed -bottom-[35%] left-0 right-0 mx-auto flex z-10 animate-slideUp justify-center lg:-bottom-[80%]">
+      {/* <div className="fixed -bottom-[35%] left-0 right-0 z-10 mx-auto flex animate-slideUp justify-center lg:-bottom-[80%]">
         <div className="animate-float transition-opacity duration-500">
           <img
             src={SpinningEarthImg}
@@ -67,8 +71,8 @@ const SpinningEarth: FC = () => {
             style={{ transform: `rotate(${rotation.toString()}deg)` }}
           />
         </div>
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 };
 
