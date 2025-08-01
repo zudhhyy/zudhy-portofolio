@@ -2,13 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer base {
+  @font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("/src/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Bold.ttf") format("truetype");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "HarmonyOS Sans";
+    src: url("/src/assets/fonts/HarmonyOS_Sans_Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: default;
+    /* scroll-behavior: smooth; */
+    font-family: HarmonyOS Sans, sans-serif;
+  }
+
+  .stroke-text {
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+  }
 }
